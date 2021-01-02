@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    
+    <link rel="icon" type="image/png"  href="images/favicon.png"/>
+
+    <title>IP Address Tracker</title>
+  </head>
+
+  <body>
+
+    <div class="top-section">
+      <h1>IP Address Tracker</h1>
+      <form action="/" method="post" class="form-section">
+        <input
+          name="inputIP"
+          type="text"
+          class="input-section"
+          placeholder="Search for any IP address or domain"
+        />
+        <button class="button" type="submit">
+          <img src="images/icon-arrow.svg" alt="arrow icon">
+        </button>
+    </div>
+    
+    <!-- middle section that recieves data from an API  -->
+    <div class="middle-section">
+      <ul>
+        <li class="border-right">
+          <p>IP ADDRESS</p>
+          <h2 class='ipNumber'><%=ipNumber%></h2>
+        </li>
+        <li class="border-right">
+          <p>LOCATION</p>
+          <h2 class='location'><%=city%>, <%=country%></h2>
+        </li>
+        <li class="border-right">
+          <p>TIME ZONE</p>
+          <h2 class='timeZone'>GTM <%=time%></h2>
+        </li>
+        <li>
+          <p>ISP</p>
+          <h2 class='ispNumber'><%=isp%></h2>
+        </li>
+      </ul>
+    </div>
+   <!-- the map section  -->
+    <iframe
+    class='map-section'
+    frameborder="0" style="border:0" src=<%=srcMaps%> allowfullscreen>
+    </iframe>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.linkedin.com/in/gyokota/">Giovana Yokota</a> <a href="https://linkedin.com/in/victorbicego/">Victor Bicego</a>.
+      </div>
+    </footer>
+  </body>
+</html>

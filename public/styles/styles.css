@@ -1,0 +1,204 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.top-section {
+  text-align: center;
+  background-image: url("../images/pattern-bg.png");
+  margin: 0;
+  padding: 25rem 0 70rem 0;
+}
+
+.top-section h1 {
+  font-size: 30rem;
+  color: white;
+  margin: 0;
+}
+
+.form-section {
+  margin-top: 25rem;
+}
+
+.input-section {
+  margin-right: 0;
+  width: 450rem;
+  height: 45rem;
+  border-radius: 15rem 0 0 15rem;
+  border-width: 0;
+  padding: 5rem 0 5rem 20rem;
+  font-size: 18rem;
+  color: #2b2b2b;
+}
+
+::placeholder {
+  color: rgb(150, 150, 150);
+  opacity: 60%;
+}
+
+.button {
+  margin-left: 0;
+  height: 55rem;
+  width: 60rem;
+  background-color: #2b2b2b;
+  border-radius: 0 15rem 15rem 0;
+  border-width: 0;
+  padding: 0;
+}
+
+/* middle section */
+.middle-section {
+  background-color: white;
+  border-radius: 6px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px 4px 0px #cdd0cb;
+  width: 75%;
+  z-index: 1;
+  position: absolute;
+  top: 150px;
+  left: 12vw;
+}
+
+.middle-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25px 20px;
+}
+
+.middle-section li {
+  text-align: left;
+  padding: 5px 20px;
+  width: 25%;
+  position: relative;
+}
+
+.border-right::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: auto;
+  height: 80%;
+  width: 50%;
+  border-right: 1px solid #cdd0cb;
+}
+
+.middle-section p {
+  margin: 2px 0 10px;
+  color: #969696;
+  font-size: 12px;
+}
+
+.middle-section h2 {
+  margin: 2px 0 0;
+  color: #2b2b2b;
+  font-size: 18px;
+}
+
+/* map section  */
+.map-section {
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+}
+
+/* footer  */
+footer {
+  height: 15vh;
+  background-image: url("../images/pattern-bg.png");
+  position: absolute;
+  bottom: -195px;
+  width: 100vw;
+}
+
+.attribution {
+  color: #2b2b2b;
+  text-align: center;
+  margin: 4vh auto;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.attribution a {
+  color: #2b2b2b;
+}
+
+/* Portrait and Landscape tablet*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .map-section {
+    width: 100vw;
+  }
+
+  footer {
+    bottom: -145px;
+    width: 100vw;
+  }
+}
+
+/* Portrait and Landscape mobile */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  html {
+    font-size: 0.75px;
+  }
+
+  .input-section {
+    width: 60%;
+    font-size: 15rem;
+  }
+
+  /* middle section  */
+  .middle-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+  }
+
+  .border-right::before {
+    content: none;
+  }
+
+  .middle-section {
+    top: 120px;
+    box-shadow: 0, 5px 0.5px 2px 0px #cdd0cb;
+  }
+
+  .middle-section li {
+    width: 80%;
+    text-align: center;
+  }
+
+  .middle-section p {
+    margin: 2px;
+  }
+
+  .middle-section h2 {
+    margin-bottom: 10px;
+  }
+
+  /* map section  */
+  .map-section {
+    top: 150px;
+  }
+
+  footer {
+    height: 10vh;
+    bottom: -50px;
+  }
+
+  .attribution {
+    margin: 4vh 10px;
+  }
+}
